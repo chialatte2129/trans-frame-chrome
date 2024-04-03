@@ -1,0 +1,17 @@
+{
+    "name": "Trans Frame",
+    "version": "1.0.0",
+    "description": "This Chrome extension enables translation by capturing images on web pages.",
+    "manifest_version": 3,
+    "author": "Der Der Wang",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Trans Frame"
+    },
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "scripting",
+        "tabs"
+    ]
+}
