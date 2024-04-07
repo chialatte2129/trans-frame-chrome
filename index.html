@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans Frame</title>
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div style="width:100px">
-        <h2>Trans Frame</h2>
-        <button id="startButton">Start</button>
+    <div id="root" class="card">
+        <h1>Trans Frame</h1>
+        <textarea
+        id="result-box"
+        class="result-box"
+        placeholder="Detecting..."
+        ></textarea>
+        <div>
+            <button id="trans-btn">Translate</button>
+        </div>
+        <iframe id="ocrFrame" src="sandbox.html" hidden></iframe>
     </div>
-    <script src="src/capture.js"></script>
+    <footer>
+        <p>
+            Design by
+            <a href="https://chialatte2129.github.io/github-portfolio/" target="_blank">Mark Wang</a>
+             
+        </p>
+        <a href="https://github.com/chialatte2129" target="_blank">
+            <img src="public/github.svg" class="github-icon" title="View Github Page" alt="GitHub">
+        </a>
+    </footer>
 </body>
+<script src="src/main.js"></script>
 </html>

@@ -23,3 +23,40 @@ git clone https://github.com/chialatte2129/trans-frame-chrome.git
 5. click `Load unpacked`
 6. select project path
 7. You will see `Trans Frame` extension in your extension list
+
+## Build webpack
+
+1. Enter /webpack
+
+```sh
+cd webpack
+```
+
+2. Init NPM
+
+```sh
+npm init -y
+```
+
+3. Edit `package.json`
+
+```json
+{
+  "private": true
+}
+```
+
+Remove `main` from parameter
+
+4. Install package
+
+```sh
+npm install webpack webpack-cli
+npm install tesseract.js
+```
+
+5. Execute webpack
+
+```sh
+npx webpack
+```

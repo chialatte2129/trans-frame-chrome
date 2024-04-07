@@ -3,15 +3,43 @@
     "version": "1.0.0",
     "description": "This Chrome extension enables translation by capturing images on web pages.",
     "manifest_version": 3,
-    "author": "Der Der Wang",
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "Trans Frame"
+    "author": "DerDer Wang",
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "sandbox": {
+        "pages": [
+          "sandbox.html"
+        ]
+    },
+    "icons": {
+        "16": "public/icons/icon16.png",
+        "48": "public/icons/icon48.png",
+        "128": "public/icons/icon128.png"
+    },
+    "background":{
+        "service_worker":"src/background.js",
+        "type": "module"
     },
     "permissions": [
+        "contextMenus",
         "activeTab",
         "downloads",
         "scripting",
+        "storage",
         "tabs"
-    ]
+    ],
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["src/content_script.js"]
+        }
+    ],
+    "host_permissions":[
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_security_policy": {
+        "sandbox": "sandbox allow-scripts;"
+    }
 }

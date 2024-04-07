@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Sandbox Webpack
+/webpack/node_modules
+/webpack/dist
+package*.json
+
+# Node.js
+/node_modules
+/npm-debug.log
+
+# Dependency directories
+/bower_components
+
+# Distribution directories
+/dist
+/build
+
+# IDE/editor specific
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
